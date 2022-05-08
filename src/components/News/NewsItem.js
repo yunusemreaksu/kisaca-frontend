@@ -12,7 +12,7 @@ const NewsItem = (props) => {
   return (
     <div>
       <div className={classes.time}>Saat: {newsTime} </div>
-      <div className={classes.text}>{newsText}</div>
+      <div className={classes.text}> {newsText} </div>
     </div>
   );
 

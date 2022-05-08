@@ -9,8 +9,8 @@ const Header = () => {
 
   return (
     <div>
-      <h1 className={classes.header} > {header} </h1>
-      <h2 className={classes.headerDate} > {headerDate} </h2>
+      <h1 className={classes.header}> {header} </h1>
+      <h2 className={classes.headerDate}> {headerDate} </h2>
     </div>
   );
 };
