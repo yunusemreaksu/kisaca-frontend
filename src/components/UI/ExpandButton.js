@@ -3,16 +3,14 @@ import React, { useState } from "react";
 import classes from "./ExpandButton.module.css";
 
 const ExpandButton = (props) => {
-  const [expandText, setExpandText] = useState(true);
-  const [showButton, setShowButton] = useState(true);
+  const [readMore, setReadMore] = useState(true);
 
   const clickHandler = () => {
-    setExpandText(!expandText);
-    setShowButton(!showButton);
+    setReadMore(!readMore);
   };
   return (
     <button className={classes.button} onClick={clickHandler}>
-      Expand
+      {readMore ? "Read more" : "Read less"}
     </button>
   );
 };

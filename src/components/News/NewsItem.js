@@ -18,8 +18,8 @@ const NewsItem = (props) => {
 
   // return (
   //   <div>
-  //     <div className={classes.time}>Saat: {props.newsTime} </div>
-  //     <div className={classes.text}>{props.newsText}</div>
+  //     <div className={classes.time}>Saat: {props.time} </div>
+  //     <div className={classes.text}>{props.text}</div>
   //   </div>
   // );
 };
