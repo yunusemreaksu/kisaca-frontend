@@ -1,8 +1,9 @@
 import React from "react";
-import NewsItem from "./NewsItem";
-import ExpandButton from "./ExpandButton";
 
 import classes from "./Card.module.css";
+import NewsItem from "../News/NewsItem";
+import ExpandButton from "./ExpandButton"
+
 
 const Card = (props) => {
   return (
