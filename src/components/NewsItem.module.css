@@ -1,0 +1,13 @@
+.text {
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  display: flex;
+  flex-direction: row;
+  flex-basis: auto;
+  justify-content: center;
+}
+
+.time {
+    color: red;
+}
