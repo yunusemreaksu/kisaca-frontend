@@ -8,7 +8,7 @@ const ExpandButton = (props) => {
 
   const handleClick = () => {
       setExpandText(!expandText)
-      setShowButton(false)
+      setShowButton(!showButton)
   }
   return <button onClick={handleClick}>expand</button>;
 };
