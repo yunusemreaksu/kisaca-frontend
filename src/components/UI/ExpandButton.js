@@ -6,12 +6,12 @@ const ExpandButton = (props) => {
   const [expandText, setExpandText] = useState(true);
   const [showButton, setShowButton] = useState(true);
 
-  const handleClick = () => {
+  const clickHandler = () => {
     setExpandText(!expandText);
     setShowButton(!showButton);
   };
   return (
-    <button className={classes.button} onClick={handleClick}>
+    <button className={classes.button} onClick={clickHandler}>
       Expand
     </button>
   );

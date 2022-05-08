@@ -1,4 +1,5 @@
 import React from "react";
+import News from "./News";
 
 import classes from "./NewsItem.module.css";
 
@@ -14,6 +15,13 @@ const NewsItem = (props) => {
       <div className={classes.text}>{newsText}</div>
     </div>
   );
+
+  // return (
+  //   <div>
+  //     <div className={classes.time}>Saat: {props.newsTime} </div>
+  //     <div className={classes.text}>{props.newsText}</div>
+  //   </div>
+  // );
 };
 
 export default NewsItem;
