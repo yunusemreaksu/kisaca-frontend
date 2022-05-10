@@ -3,20 +3,30 @@ import React, { useState } from "react";
 import classes from "./CommentBox.module.css";
 
 const CommentBox = (props) => {
-  const [entredComment, setEnteredComment] = useState("");
+  const [enteredComment, setEnteredComment] = useState("");
   const commentChangeHandler = (event) => {
     setEnteredComment(event.target.value);
   };
 
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const commentData = {
+      comment: enteredComment,
+    };
+    setEnteredComment("");
+  };
+
   return (
-    <div>
+    <form onSubmit={submitHandler}>
       <input
         type="text"
+        value={enteredComment}
         className={classes.input}
         onChange={commentChangeHandler}
       />
-      <button className={classes.submitbtn}>Submit</button>
-    </div>
+      <button className={classes.submit_btn}>Submit</button>
+    </form>
   );
 };
 
