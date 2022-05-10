@@ -18,11 +18,11 @@ const CommentBox = (props) => {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form onSubmit={submitHandler} className={classes.form}>
       <input
         type="text"
+        placeholder="Yorumunuzu yazın..."
         value={enteredComment}
-        className={classes.input}
         onChange={commentChangeHandler}
       />
       <button className={classes.submit_btn}>Submit</button>
