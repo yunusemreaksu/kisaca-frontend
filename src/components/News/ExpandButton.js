@@ -10,8 +10,8 @@ const ExpandButton = (props) => {
     setReadMore(!readMore);
   };
   return (
-    <button className={classes.button} onClick={clickHandler}>
-      {readMore ? "Read more" : "Read less"}
+    <button className={classes.btn_expand} onClick={clickHandler}>
+      {readMore ? "Read less" : "Read more"}
     </button>
   );
 };
