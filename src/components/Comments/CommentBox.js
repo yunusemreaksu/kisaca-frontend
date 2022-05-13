@@ -22,11 +22,13 @@ const CommentBox = (props) => {
       time: commentTime,
       id: commentId,
     };
-    if (enteredComment === "") {
+
+    if (enteredComment === "" || " ") {
       return null;
     } else {
       setEnteredComment("");
     }
+
     console.log(commentData);
   };
 
