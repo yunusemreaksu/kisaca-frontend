@@ -5,7 +5,7 @@ import classes from "./CommentBox.module.css";
 
 const CommentBox = (props) => {
   const [enteredComment, setEnteredComment] = useState("");
-  const [showComments, setShowComments] = useState(true);
+  const [showComments, setShowComments] = useState(false);
 
   const commentChangeHandler = (event) => {
     if (event.currentTarget.value.includes(" ")) {
@@ -38,7 +38,7 @@ const CommentBox = (props) => {
   return (
     <div>
       <button onClick={showCommentsButtonClickHandler}>
-        {showComments ? "Hide Comments" : "Show Comments"}
+        {showComments ? "Yorumları gizle" : "Yorumları göster"}
       </button>
       <div hidden={showComments ? false : true}>
         <UsersComments />
@@ -55,7 +55,7 @@ const CommentBox = (props) => {
             />
           </div>
           <button type="submit" className={classes.submit_btn}>
-            Submit
+            Gönder
           </button>
         </form>
       </div>

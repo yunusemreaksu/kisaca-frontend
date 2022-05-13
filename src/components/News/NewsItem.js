@@ -30,7 +30,7 @@ const NewsItem = (props) => {
         {readMore ? news.text : `${news.text.substring(0, 200)}...`}
       </div>
       <button className={classes.btn_expand} onClick={clickHandler}>
-        {readMore ? "Read less" : "Read more"}
+        {readMore ? "Kısaca oku" : "Devamını oku"}
       </button>
     </div>
   );
