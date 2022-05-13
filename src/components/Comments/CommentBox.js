@@ -1,12 +1,14 @@
 import React, { useState } from "react";
+import UsersComments from "./UsersComments";
 
 import classes from "./CommentBox.module.css";
 
 const CommentBox = (props) => {
   const [enteredComment, setEnteredComment] = useState("");
+  const [showComments, setShowComments] = useState(true);
 
   const commentChangeHandler = (event) => {
-    if (event.currentTarget.value.includes(" " || "")) {
+    if (event.currentTarget.value.includes(" ")) {
       event.currentTarget.value = event.currentTarget.value.replace(/\s/g, "");
     }
     setEnteredComment(event.target.value);
@@ -29,22 +31,35 @@ const CommentBox = (props) => {
     setEnteredComment("");
   };
 
+  const showCommentsButtonClickHandler = (event) => {
+    setShowComments(!showComments);
+  };
+
   return (
-    <form className={classes.form} onSubmit={submitHandler}>
-      <div>
-        <label className={classes.label}>Yorum: </label>
-        <input
-          className={classes.input}
-          type="text"
-          placeholder="Yorumunuzu yazın..."
-          value={enteredComment}
-          onChange={commentChangeHandler}
-        />
-      </div>
-      <button type="submit" className={classes.submit_btn}>
-        Submit
+    <div>
+      <button onClick={showCommentsButtonClickHandler}>
+        {showComments ? "Hide Comments" : "Show Comments"}
       </button>
-    </form>
+      <div hidden={showComments ? false : true}>
+        <UsersComments />
+        <form className={classes.form} onSubmit={submitHandler}>
+          <div>
+            <label className={classes.label}>Yorum: </label>
+            <input
+              className={classes.input}
+              type="text"
+              required
+              placeholder="Yorumunuzu yazın..."
+              value={enteredComment}
+              onChange={commentChangeHandler}
+            />
+          </div>
+          <button type="submit" className={classes.submit_btn}>
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
   );
 };
 
