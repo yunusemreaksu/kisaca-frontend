@@ -10,10 +10,11 @@ const NewsItem = (props) => {
     setReadMore(!readMore);
   };
 
-  //News kullanılmayacaksa - BAŞLANGIÇ
+  // --- News kullanılmayacaksa - BAŞLANGIÇ
   const newsText =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
   const textLength = newsText.length;
+  //const checkTextLength = textLength > 200 ? readMore : !readMore;
   const newsDate = new Date();
   const newsTime = newsDate.toLocaleTimeString();
 
@@ -33,9 +34,9 @@ const NewsItem = (props) => {
       </button>
     </div>
   );
-  //News kullanılmayacaksa - BİTİŞ
+  // --- News kullanılmayacaksa - BİTİŞ
 
-  //News kullanılacaksa - BAŞLANGIÇ
+  // --- News kullanılacaksa - BAŞLANGIÇ
   // const saveNewsDataHandler = (newsDataFromNews) => {
   //   const newsData = {
   //     ...newsDataFromNews,
@@ -50,7 +51,7 @@ const NewsItem = (props) => {
   //       </button>
   //     </div>
   //   );
-  //News kullanılacaksa - BİTİŞ
+  // --- News kullanılacaksa - BİTİŞ
 };
 
 export default NewsItem;
