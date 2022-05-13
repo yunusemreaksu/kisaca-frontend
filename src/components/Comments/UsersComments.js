@@ -4,11 +4,11 @@ import classes from "./UsersComments.module.css";
 
 const UsersComments = (props) => {
   return (
-    <div>
+    <ol>
       <li>Comment1</li>
       <li>Comment2</li>
       <li>Comment3</li>
-    </div>
+    </ol>
   );
 };
 

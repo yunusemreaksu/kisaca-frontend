@@ -27,7 +27,7 @@ const NewsItem = (props) => {
     <div>
       <div className={classes.time}>Saat: {news.time} </div>
       <div className={classes.text}>
-        {readMore ? news.text : `${news.text.substring(0, 200)}...`}
+        {readMore ? news.text : `${news.text.substring(0, 150)}...`}
       </div>
       <button className={classes.btn_expand} onClick={clickHandler}>
         {readMore ? "Kısaca oku" : "Devamını oku"}
