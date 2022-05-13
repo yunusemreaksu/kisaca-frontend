@@ -6,6 +6,9 @@ const CommentBox = (props) => {
   const [enteredComment, setEnteredComment] = useState("");
 
   const commentChangeHandler = (event) => {
+    if (event.currentTarget.value.includes(" " || "")) {
+      event.currentTarget.value = event.currentTarget.value.replace(/\s/g, "");
+    }
     setEnteredComment(event.target.value);
   };
 
@@ -22,14 +25,8 @@ const CommentBox = (props) => {
       time: commentTime,
       id: commentId,
     };
-
-    if (enteredComment === "" || " ") {
-      return null;
-    } else {
-      setEnteredComment("");
-    }
-
     console.log(commentData);
+    setEnteredComment("");
   };
 
   return (
