@@ -1,18 +1,17 @@
 .form {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
- .input {
-    display: flex;   
-    align-content: flex-start;
-    width: 40%;
-    height: 200px;
-
+.input {
+  display: flex;
+  align-content: flex-start;
+  width: 40%;
+  height: 200px;
 }
 
-.submit_btn{
-    display: flex;
-    width: 40%;
-    justify-content: center;
+.submit_btn {
+  display: flex;
+  width: 40%;
+  justify-content: center;
 }
