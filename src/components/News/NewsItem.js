@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Card from "../UI/Card";
+import CommentBox from "../Comments/CommentBox";
 //import News from "./News";
 
 import classes from "./NewsItem.module.css";
@@ -23,15 +25,20 @@ const NewsItem = (props) => {
     text: newsText,
   };
 
+  const transferDataHandler = () => {}
+
   return (
     <div>
-      <div className={classes.time}>Saat: {news.time} </div>
-      <div className={classes.text}>
-        {readMore ? news.text : `${news.text.substring(0, 150)}...`}
-      </div>
-      <button className={classes.btn_expand} onClick={clickHandler}>
-        {readMore ? "Kısaca oku" : "Devamını oku"}
-      </button>
+      <Card>
+        <div className={classes.time}>Saat: {news.time} </div>
+        <div className={classes.text}>
+          {readMore ? news.text : `${news.text.substring(0, 150)}...`}
+        </div>
+        <button className={classes.btn_expand} onClick={clickHandler}>
+          {readMore ? "Kısaca oku" : "Devamını oku"}
+        </button>
+        <CommentBox onSaveCommentData={transferDataHandler} />
+      </Card>
     </div>
   );
   // --- News kullanılmayacaksa - BİTİŞ
