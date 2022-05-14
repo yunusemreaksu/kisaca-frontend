@@ -1,6 +1,5 @@
 .text {
   -webkit-line-clamp: 3;
-  text-overflow: ellipsis;
   overflow-wrap: break-word;
   display: flex;
   flex-direction: row;
@@ -8,6 +7,7 @@
   justify-content: center;
 }
 
-.time {
-    color: red;
+.btn_expand{
+  display: flex;
+
 }

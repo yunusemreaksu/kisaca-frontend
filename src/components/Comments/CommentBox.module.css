@@ -1,5 +1,18 @@
-.input {
+.form {
     display: flex;
-    align-content: stretch;
-    padding: 50%;
+    flex-direction: column;
+}
+
+ .input {
+    display: flex;   
+    align-content: flex-start;
+    width: 40%;
+    height: 200px;
+
+}
+
+.submit_btn{
+    display: flex;
+    width: 40%;
+    justify-content: center;
 }
