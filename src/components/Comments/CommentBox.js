@@ -38,28 +38,27 @@ const CommentBox = (props) => {
 
   return (
     <div>
-        <button onClick={showCommentsButtonClickHandler}>
-          {showComments ? "Yorumları gizle" : "Yorumları göster"}
-        </button>
-        <div hidden={showComments ? false : true}>
-          <UsersComments />
-          <form className={classes.form} onSubmit={submitHandler}>
-            <div>
-              <label className={classes.label}>Yorum: </label>
-              <input
-                className={classes.input}
-                type="text"
-                required
-                placeholder="Yorumunuzu yazın..."
-                value={enteredComment}
-                onChange={commentChangeHandler}
-              />
-            </div>
-            <button type="submit" className={classes.submit_btn}>
-              Gönder
-            </button>
-          </form>
-        </div>
+      <button onClick={showCommentsButtonClickHandler}>
+        {showComments ? "Yorumları gizle" : "Yorumları göster"}
+      </button>
+      <div hidden={showComments ? false : true}>
+        <UsersComments />
+        <form className={classes.form} onSubmit={submitHandler}>
+          <div>
+            <input
+              className={classes.input}
+              type="text"
+              required
+              placeholder="Yorumunuzu yazın..."
+              value={enteredComment}
+              onChange={commentChangeHandler}
+            />
+          </div>
+          <button type="submit" className={classes.submit_btn}>
+            Gönder
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

@@ -25,7 +25,7 @@ const NewsItem = (props) => {
     text: newsText,
   };
 
-  const transferDataHandler = () => {}
+  const transferDataHandler = () => {};
 
   return (
     <div>
