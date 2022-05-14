@@ -14,12 +14,8 @@ const Header = () => {
         <h2 className={classes.headerDate}> {headerDate} </h2>
       </div>
       <div className={classes.header_right}>
-        <button hidden className={classes.btn_signup}>
-          Üye Ol
-        </button>
-        <button hidden className={classes.btn_login}>
-          Giriş yap
-        </button>
+        <button className={classes.btn_signup}>Üye Ol</button>
+        <button className={classes.btn_login}>Giriş yap</button>
       </div>
     </div>
   );
