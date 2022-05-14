@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import UsersComments from "./UsersComments";
 
 import classes from "./CommentBox.module.css";
+import CommentList from "./CommentList";
 
 const CommentBox = (props) => {
   const [enteredComment, setEnteredComment] = useState("");
@@ -42,7 +42,7 @@ const CommentBox = (props) => {
         {showComments ? "Yorumları gizle" : "Yorumları göster"}
       </button>
       <div hidden={showComments ? false : true}>
-        <UsersComments />
+        <CommentList />
         <form className={classes.form} onSubmit={submitHandler}>
           <div>
             <input
