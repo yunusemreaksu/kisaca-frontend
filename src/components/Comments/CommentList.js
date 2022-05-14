@@ -1,3 +1,5 @@
+//DEACTIVE
+
 import React from "react";
 
 import classes from "./CommentList.module.css";

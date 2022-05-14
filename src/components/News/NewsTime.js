@@ -1,11 +1,13 @@
 import React from "react";
 
+import classes from "./NewsTime.module.css"
+
 const NewsTime = (props) => {
   const newsDate = new Date();
   const newsTime = newsDate.toLocaleTimeString();
 
   return (
-      <div>Saat: {newsTime}</div>
+      <div className={classes.time}>Saat: {newsTime}</div>
   )
 };
 
