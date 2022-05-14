@@ -44,7 +44,6 @@ const CommentBox = (props) => {
         <UsersComments />
         <form className={classes.form} onSubmit={submitHandler}>
           <div>
-            <label className={classes.label}>Yorum: </label>
             <input
               className={classes.input}
               type="text"
