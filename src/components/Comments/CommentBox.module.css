@@ -1,1 +1,5 @@
-.submit_btn
+.input {
+    display: flex;
+    align-content: stretch;
+    padding: 50%;
+}
