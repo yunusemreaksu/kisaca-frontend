@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import CommentInput from "../Comments/CommentInput";
 import Card from "../UI/Card";
-import CommentBox from "../Comments/CommentBox";
+//import CommentBox from "../Comments/CommentBox";
 //import News from "./News";
 
 import classes from "./NewsItem.module.css";
@@ -16,14 +17,16 @@ const NewsItem = (props) => {
   // --- News kullanılmayacaksa - BAŞLANGIÇ
   const newsText =
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
-  const textLength = newsText.length;
+  // const textLength = newsText.length;
   //const checkTextLength = textLength > 200 ? readMore : !readMore;
 
   const news = {
     text: newsText,
   };
 
-  const transferDataHandler = () => {};
+  const transferDataHandler = (enteredComment) => {
+    props.onAddComment(enteredComment)
+  };
 
   return (
     <div>
@@ -36,6 +39,7 @@ const NewsItem = (props) => {
           {readMore ? "Kısaca oku" : "Devamını oku"}
         </button>
         {/* <CommentBox onSaveCommentData={transferDataHandler} /> */}
+        <CommentInput onSaveComment={transferDataHandler} />
       </Card>
     </div>
   );

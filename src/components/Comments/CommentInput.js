@@ -1,11 +1,8 @@
-//DEACTIVE
-
 import React, { useState } from "react";
 
-import classes from "./CommentBox.module.css";
-import CommentList from "./CommentList";
+import classes from "./CommentInput.classes.css";
 
-const CommentBox = (props) => {
+const CommentInput = (props) => {
   const [enteredComment, setEnteredComment] = useState("");
   const [showComments, setShowComments] = useState(false);
 
@@ -16,21 +13,10 @@ const CommentBox = (props) => {
     setEnteredComment(event.target.value);
   };
 
-  const commentId = Math.random().toString();
-  const commentDate = new Date();
-  const commentTime = commentDate.toLocaleTimeString();
-
   const submitHandler = (event) => {
     event.preventDefault();
 
-    const commentData = {
-      comment: enteredComment,
-      date: commentDate,
-      time: commentTime,
-      id: commentId,
-    };
-    console.log(commentData);
-    props.onSaveCommentData(commentData);
+    props.onSaveComment(enteredComment);
     setEnteredComment("");
   };
 
@@ -44,7 +30,6 @@ const CommentBox = (props) => {
         {showComments ? "Yorumları gizle" : "Yorumları göster"}
       </button>
       <div hidden={showComments ? false : true}>
-        {/* <CommentList /> */}
         <form className={classes.form} onSubmit={submitHandler}>
           <div>
             <input
@@ -65,4 +50,4 @@ const CommentBox = (props) => {
   );
 };
 
-export default CommentBox;
+export default CommentInput;
