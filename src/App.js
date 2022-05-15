@@ -1,22 +1,16 @@
 import { useState } from "react";
 
-import NewsItem from "./components/News/NewsItem";
 import Header from "./components/UI/Header";
+import NewsItem from "./components/News/NewsItem";
+import CommentList from "./components/Comments/CommentList";
 
 import "./App.css";
-import CommentInput from "./components/Comments/CommentInput";
-import CommentList from "./components/Comments/CommentList";
-import Card from "./components/UI/Card";
+import CommentItem from "./components/Comments/CommentItem";
 
 //const DUMMY_COMMENTS = [{ comment: "xyz" }, { comment: "abc" }];
 
 function App() {
-  const [comments, setComments] = useState([
-    {
-      text: "First comment",
-      id: "c1",
-    },
-  ]);
+  const [comments, setComments] = useState([{}]);
 
   // const addCommentHandler = (comment) => {
   //   setComments((prevComments) => {
@@ -61,7 +55,8 @@ function App() {
           {/* <CommentInput onAddComment={addCommentHandler} /> */}
           <NewsItem onAddComment={addCommentHandler} />
         </section>
-        <section>{commentContent}</section>
+        {/* Comment için alttaki satır çalıştırıkacak */}
+        {/* <section>{commentContent}</section> */} 
       </div>
     </div>
   );

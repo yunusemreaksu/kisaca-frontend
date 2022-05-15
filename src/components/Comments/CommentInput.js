@@ -1,3 +1,5 @@
+//DEACTIVE
+
 import React, { useState } from "react";
 
 import classes from "./CommentInput.classes.css";
@@ -16,8 +18,20 @@ const CommentInput = (props) => {
   const submitHandler = (event) => {
     event.preventDefault();
 
-    props.onSaveComment(enteredComment);
+    const commentId = Math.random().toString();
+    const commentDate = new Date();
+    const commentTime = commentDate.toLocaleTimeString();
+
+    const commentData = {
+      comment: enteredComment,
+      date: commentDate,
+      time: commentTime,
+      id: commentId,
+    };
+
+    props.onSaveCommentData(enteredComment);
     setEnteredComment("");
+    console.log(commentData);
   };
 
   const showCommentsButtonClickHandler = (event) => {

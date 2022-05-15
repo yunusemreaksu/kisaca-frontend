@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CommentInput from "../Comments/CommentInput";
+import CommentList from "../Comments/CommentList";
 import Card from "../UI/Card";
 //import CommentBox from "../Comments/CommentBox";
 //import News from "./News";
@@ -25,13 +26,13 @@ const NewsItem = (props) => {
   };
 
   const transferDataHandler = (enteredComment) => {
-    props.onAddComment(enteredComment)
+    props.onAddComment(enteredComment);
   };
 
   return (
     <div>
       <Card>
-      <NewsTime />
+        <NewsTime />
         <div className={classes.text}>
           {readMore ? news.text : `${news.text.substring(0, 150)}...`}
         </div>
@@ -39,7 +40,8 @@ const NewsItem = (props) => {
           {readMore ? "Kısaca oku" : "Devamını oku"}
         </button>
         {/* <CommentBox onSaveCommentData={transferDataHandler} /> */}
-        <CommentInput onSaveComment={transferDataHandler} />
+        {/* Comment için alttaki satır çalıştırılacak */}
+        {/* <CommentInput onSaveCommentData={transferDataHandler} /> */}
       </Card>
     </div>
   );
