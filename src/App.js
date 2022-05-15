@@ -20,9 +20,6 @@ function App() {
     <div>
       <Header />
       <NewsItem onAddComment={addCommentHandler} items={comments} />
-      <NewsItem onAddComment={addCommentHandler} items={comments} />
-      <NewsItem onAddComment={addCommentHandler} items={comments} />
-      <NewsItem onAddComment={addCommentHandler} items={comments} />
     </div>
   );
 }
