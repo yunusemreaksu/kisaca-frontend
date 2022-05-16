@@ -30,20 +30,20 @@ const NewsItem = (props) => {
   };
 
   return (
-    <div>
-      <Card>
-        <NewsTime />
-        <div className={classes.text}>
-          {readMore ? news.text : `${news.text.substring(0, 150)}...`}
-        </div>
-        <button className={classes.btn_expand} onClick={clickHandler}>
-          {readMore ? "Kısaca oku" : "Devamını oku"}
-        </button>
-        {/* <CommentBox onSaveCommentData={transferDataHandler} /> */}
-        {/* Comment için alttaki satır çalıştırılacak */}
-        {/* <CommentInput onSaveCommentData={transferDataHandler} /> */}
-      </Card>
-    </div>
+    <React.Fragment>
+        <Card>
+          <NewsTime />
+          <div className={classes.text}>
+            {readMore ? news.text : `${news.text.substring(0, 150)}...`}
+          </div>
+          <button className={classes.btn_expand} onClick={clickHandler}>
+            {readMore ? "Kısaca oku" : "Devamını oku"}
+          </button>
+          {/* <CommentBox onSaveCommentData={transferDataHandler} /> */}
+          {/* Comment için alttaki satır çalıştırılacak */}
+          {/* <CommentInput onSaveCommentData={transferDataHandler} /> */}
+        </Card>
+    </React.Fragment>
   );
   // --- News kullanılmayacaksa - BİTİŞ
 

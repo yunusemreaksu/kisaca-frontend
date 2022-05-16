@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
 import Header from "./components/UI/Header";
 import NewsItem from "./components/News/NewsItem";
@@ -47,7 +47,7 @@ function App() {
   }
 
   return (
-    <div>
+    <React.Fragment>
       <Header />
       {/* <NewsItem onAddComment={addCommentHandler} items={comments} /> */}
       <div>
@@ -56,9 +56,9 @@ function App() {
           <NewsItem onAddComment={addCommentHandler} />
         </section>
         {/* Comment için alttaki satır çalıştırıkacak */}
-        {/* <section>{commentContent}</section> */} 
+        {/* <section>{commentContent}</section>  */}
       </div>
-    </div>
+    </React.Fragment>
   );
 }
 

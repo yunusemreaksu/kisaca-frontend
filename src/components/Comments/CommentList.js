@@ -7,7 +7,7 @@ import classes from "./CommentList.module.css";
 
 const CommentList = (props) => {
   return (
-    <ol className={classes.ordered_list}>
+      <ol className={classes.ordered_list}>
         {props.items.map((comment) => (
           <CommentItem
             key={comment.id}
@@ -17,7 +17,7 @@ const CommentList = (props) => {
             {comment.text}
           </CommentItem>
         ))}
-    </ol>
+      </ol>
   );
 };
 
