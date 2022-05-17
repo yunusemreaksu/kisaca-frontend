@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import Header from "./components/UI/Header";
 import NewsItem from "./components/News/NewsItem";
 import CommentList from "./components/Comments/CommentList";
+import CommentItem from "./components/Comments/CommentItem";
 
 import "./App.css";
-import CommentItem from "./components/Comments/CommentItem";
 
 //const DUMMY_COMMENTS = [{ comment: "xyz" }, { comment: "abc" }];
 
