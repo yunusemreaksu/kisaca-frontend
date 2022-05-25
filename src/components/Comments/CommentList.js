@@ -6,18 +6,24 @@ import CommentItem from "./CommentItem";
 import classes from "./CommentList.module.css";
 
 const CommentList = (props) => {
+  if (props.userComments.length === 0) {
+    return <h1 className={classes.h1}>Henüz hiç yorum yapılmamış.</h1>;
+  }
+
   return (
-      <ol className={classes.ordered_list}>
-        {props.items.map((comment) => (
+    <ol className={classes.ordered_list}>
+      {props.userComments.map((userComment) => {
+        return (
           <CommentItem
-            key={comment.id}
-            id={comment.id}
-            onDelete={props.onDeleteItem}
+            id={userComment.id}
+            key={userComment.id}
+            // commentText={userComment.commentText}
           >
-            {comment.text}
+            {userComment.commentText}
           </CommentItem>
-        ))}
-      </ol>
+        );
+      })}
+    </ol>
   );
 };
 

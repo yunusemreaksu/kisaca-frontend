@@ -8,16 +8,16 @@ const Header = () => {
   const headerDate = date.toLocaleDateString();
 
   return (
-    <div className={classes.header}>
+    <header className={classes.header}>
       <div className={classes.header_left}>
         <h1 className={classes.headerName}> {header} </h1>
         <h2 className={classes.headerDate}> {headerDate} </h2>
       </div>
-      <div hidden className={classes.header_right}>
+      <div  className={classes.header_right}>
         <button className={classes.btn_signup}>Üye Ol</button>
         <button className={classes.btn_login}>Giriş yap</button>
       </div>
-    </div>
+    </header>
   );
 };
 
