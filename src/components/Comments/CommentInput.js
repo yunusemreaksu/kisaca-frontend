@@ -46,10 +46,13 @@ const CommentInput = (props) => {
       <div hidden={showComments ? false : true}>
         <form className={classes.form} onSubmit={submitHandler}>
           <div>
-            <input
-              className={classes.input}
+            <textarea
+              className={classes.textarea}
+              name="textarea"
               type="text"
               required
+              rows="7"
+              cols="40"
               placeholder="Yorumunuzu yazın..."
               value={enteredComment}
               onChange={commentChangeHandler}
