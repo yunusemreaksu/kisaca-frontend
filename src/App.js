@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import Header from "./components/UI/Header";
 import NewsItem from "./components/News/NewsItem";
@@ -46,7 +47,7 @@ function App() {
   // };
 
   // let commentContent = <p>Henüz hiç yorum yapılmamış.</p>;
-  
+
   // if (comments.length > 0) {
   //   commentContent = (
   //     <CommentList items={comments} onDeleteItem={deleteCommentItemHandler} />
