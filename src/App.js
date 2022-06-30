@@ -29,7 +29,7 @@ const App = () => {
   }, []);
 
   if (loading) {
-    return <p>Haberler yükleniyor...</p>;
+    return <p className="loading">Haberler yükleniyor...</p>;
   }
 
   if (error || !Array.isArray(data)) {

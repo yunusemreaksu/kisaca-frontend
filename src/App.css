@@ -1,4 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+
 .App {
   text-align: center;
   background-color: blueviolet;
+}
+
+.loading {
+  font-family: "Cormorant Garamond", serif;
 }
