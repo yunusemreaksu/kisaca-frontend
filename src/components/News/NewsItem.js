@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import Card from "../UI/Card";
-// import CommentInput from "../Comments/CommentInput";
+import CommentInput from "../Comments/CommentInput";
 // import CommentList from "../Comments/CommentList";
 // import NewsTime from "./NewsTime";
 
@@ -40,7 +40,7 @@ const NewsItem = (props) => {
         {/* <CommentBox onSaveCommentData={transferDataHandler} /> */}
         {/* <CommentList userComments={comments} /> */}
         {/* Comment için alttaki satır çalıştırılacak */}
-        {/* <CommentInput onSaveCommentData={addCommentHandler} /> */}
+        <CommentInput onSaveCommentData={addCommentHandler} />
       </Card>
     </React.Fragment>
   );

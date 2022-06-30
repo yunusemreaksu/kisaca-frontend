@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-import classes from "./CommentInput.classes.css";
+import classes from "./CommentInput.module.css";
 
 const CommentInput = (props) => {
   const [enteredComment, setEnteredComment] = useState("");
@@ -40,14 +40,17 @@ const CommentInput = (props) => {
 
   return (
     <div>
-      <button onClick={showCommentsButtonClickHandler}>
+      <button
+        onClick={showCommentsButtonClickHandler}
+        className={classes.btn_show}
+      >
         {showComments ? "Yorumları gizle" : "Yorumları göster"}
       </button>
       <div hidden={showComments ? false : true}>
         <form className={classes.form} onSubmit={submitHandler}>
           <div>
             <textarea
-              className={classes.textarea}
+              className={classes.text_area}
               name="textarea"
               type="text"
               required
@@ -58,7 +61,7 @@ const CommentInput = (props) => {
               onChange={commentChangeHandler}
             />
           </div>
-          <button type="submit" className={classes.submit_btn}>
+          <button type="submit" className={classes.btn_submit}>
             Gönder
           </button>
         </form>
