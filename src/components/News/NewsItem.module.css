@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 
-.text {
+.news_text {
   -webkit-line-clamp: 3;
   font-family: "Cormorant Garamond", serif;
   overflow-wrap: break-word;

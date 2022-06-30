@@ -2,27 +2,63 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import Header from "./components/UI/Header";
-import NewsItem from "./components/News/NewsItem";
-import CommentList from "./components/Comments/CommentList";
-import CommentItem from "./components/Comments/CommentItem";
+// import CommentList from "./components/Comments/CommentList";
+// import CommentItem from "./components/Comments/CommentItem";
 
 import "./App.css";
+import NewsList from "./components/News/NewsList";
 
-//const DUMMY_COMMENTS = [{ comment: "xyz" }, { comment: "abc" }];
-
-function App() {
-  // const [comments, setComments] = useState([]);
-
-  const [backendData, setBackendData] = useState({})
+const App = () => {
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState();
 
   useEffect(() => {
-    fetch("http://localhost:8080/api/main/").then(
-      response => response.json()
-    ).then(data => {setBackendData(data)});
-  }, [])
+    setLoading(true);
+    fetch("http://localhost:8080/api/main/")
+      .then((res) => res.json())
+      .then((data) => {
+        setData(data.news);
+      })
+      .catch((err) => {
+        setError(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
 
-  const newsText =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+  if (loading) {
+    return <p>Haberler yükleniyor...</p>;
+  }
+
+  if (error || !Array.isArray(data)) {
+    return <p>There was an error loading your data!</p>;
+  }
+
+  // const [loadedNews, setLoadedNews] = useState([]);
+  // const [error, setError] = useState();
+
+  // useEffect(() => {
+  //   const sendRequest = async () => {
+  //     try {
+  //       const response = await fetch("http://localhost:8080/api/main/");
+
+  //       const responseData = await response.json();
+
+  //       if (!response.ok) {
+  //         throw new Error(responseData.message);
+  //       }
+  //       setLoadedNews(responseData.newsText);
+  //     } catch (err) {
+  //       setError(err.message);
+  //     }
+  //   };
+  //   sendRequest();
+  // }, []);
+
+  // const newsText =
+  //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
   // const addCommentHandler = (comment) => {
   //   setComments((prevComments) => {
@@ -69,7 +105,7 @@ function App() {
       <div>
         <section>
           {/* <CommentInput onAddComment={addCommentHandler} /> */}
-          <NewsItem item={newsText} />
+          <NewsList items={data} />
           {/* <CommentList userComments={comments} /> */}
         </section>
         {/* Comment için alttaki satır çalıştırılacak */}
@@ -77,6 +113,6 @@ function App() {
       </div>
     </React.Fragment>
   );
-}
+};
 
 export default App;
