@@ -13,7 +13,7 @@ const Header = () => {
         <h1 className={classes.header_name}> {header} </h1>
         <h2 className={classes.header_date}> {headerDate} </h2>
       </div>
-      <div  className={classes.header_right}>
+      <div className={classes.header_right}>
         <button className={classes.btn_signup}>Üye Ol</button>
         <button className={classes.btn_login}>Giriş yap</button>
       </div>

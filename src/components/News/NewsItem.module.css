@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 
 .date {
-  margin-top: .5%;
+  margin-top: .5rem;
   font-family: "Cormorant Garamond", serif;
 }
 
 .time {
-  margin-top: .1%;
+  margin-top: .1rem;
   font-family: "Cormorant Garamond", serif;
 }
 
