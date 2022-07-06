@@ -1,0 +1,4 @@
+.signup_form input, .btn_signup {
+    display: block;
+    margin-top: .1rem;
+}

@@ -1,17 +1,72 @@
-import React from "react";
+import React, { useState } from "react";
 
 import classes from "./Signup.module.css";
 
 const Signup = (props) => {
+  const [enteredNameSurname, setEnteredNameSurname] = useState("");
+  const [enteredEmail, setEnteredEmail] = useState("");
+  const [enteredPassword, setEnteredPassword] = useState("");
+
+  const submitHandler = (event) => {
+    event.preventDefault();
+
+    const submittedData = {
+      nameSurname: enteredNameSurname,
+      email: enteredEmail,
+      password: enteredPassword,
+    };
+
+    setEnteredNameSurname("");
+    setEnteredEmail("");
+    setEnteredPassword("");
+  };
+
+  const nameSurnameChangeHandler = (event) => {
+    setEnteredNameSurname(event.target.value);
+  };
+  const emailChangeHandler = (event) => {
+    setEnteredEmail(event.target.value);
+  };
+  const passwordChangeHandler = (event) => {
+    setEnteredPassword(event.target.value);
+  };
   return (
-    <form className={classes.form}>
-      <div>
-        <input type="text" name="name-surname" required placeholder="Adınız - Soyadınız:" />
-        <input type="text" name="email" required placeholder="E-mail Adresiniz:" />
-        <input type="text" name="password" required minLength="6" placeholder="Şifreniz:" />
-      </div>
-      <button type="submit">Kaydol</button>
-    </form>
+    <main className={classes.signup_page}>
+      <h1 className={classes.signup_title}>Üye Ol</h1>
+      <form className={classes.signup_form} onSubmit={submitHandler}>
+        <input
+          required
+          type="text"
+          name="name-surname"
+          id="name-surname"
+          placeholder="Adınız - Soyadınız:"
+          value={enteredNameSurname}
+          onChange={nameSurnameChangeHandler}
+        />
+        <input
+          required
+          type="text"
+          name="email"
+          id="email"
+          placeholder="E-mail Adresiniz:"
+          value={enteredEmail}
+          onChange={emailChangeHandler}
+        />
+        <input
+          required
+          type="text"
+          name="password"
+          id="password"
+          minLength="6"
+          placeholder="Şifreniz:"
+          value={enteredPassword}
+          onChange={passwordChangeHandler}
+        />
+        <button type="submit" className={classes.btn_signup}>
+          Kaydol
+        </button>
+      </form>
+    </main>
   );
 };
 

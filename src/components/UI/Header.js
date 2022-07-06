@@ -14,8 +14,12 @@ const Header = () => {
         <h2 className={classes.header_date}> {headerDate} </h2>
       </div>
       <div className={classes.header_right}>
-        <button className={classes.btn_signup}>Üye Ol</button>
-        <button className={classes.btn_login}>Giriş yap</button>
+        <button className={classes.btn_signup}>
+          <a href="users/signup">Üye ol</a>
+        </button>
+        <button className={classes.btn_login}>
+          <a href="users/login">Giriş yap</a>
+        </button>
       </div>
     </header>
   );
