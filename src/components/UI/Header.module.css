@@ -18,17 +18,38 @@
 .header_name {
   font-family: "Cinzel", serif;
   font-family: "Cormorant Garamond", serif;
-  margin-top: .3rem;
+  margin-top: 0.3rem;
   margin-bottom: 0rem;
 }
 
 .header_date {
   font-size: small;
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   align-self: flex-start;
 }
 
 .header_right {
   margin-right: 1rem;
   margin-top: 1.5rem;
+}
+
+.btn_signup {
+  border-radius: 5px;
+  border: 1px outset;
+  background-color: #f8f8f8;
+}
+
+.btn_signup a {
+  text-decoration: none;
+}
+
+.btn_login {
+  border-radius: 5px;
+  border: 1px outset;
+  background-color: #f8f8f8;
+  margin-left: 0.1rem;
+}
+
+.btn_login a {
+  text-decoration: none;
 }

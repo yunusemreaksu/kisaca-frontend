@@ -15,10 +15,10 @@ const Header = () => {
       </div>
       <div className={classes.header_right}>
         <button className={classes.btn_signup}>
-          <a href="users/signup">Üye ol</a>
+          <a href="users/signup">Üye Ol</a>
         </button>
         <button className={classes.btn_login}>
-          <a href="users/login">Giriş yap</a>
+          <a href="users/login">Giriş Yap</a>
         </button>
       </div>
     </header>

@@ -14,6 +14,19 @@ const Login = (props) => {
       password: enteredPassword,
     };
 
+    fetch("http://localhost:8080/api/users/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(submittedData),
+    })
+      .then((response) => response.json())
+      .then((submittedData) => {
+        console.log("Success: ", submittedData);
+      })
+      .catch((error) => {
+        console.error("Error: ", error);
+      });
+
     setEnteredEmail("");
     setEnteredPassword("");
   };

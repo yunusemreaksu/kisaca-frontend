@@ -11,10 +11,23 @@ const Signup = (props) => {
     event.preventDefault();
 
     const submittedData = {
-      nameSurname: enteredNameSurname,
+      name: enteredNameSurname,
       email: enteredEmail,
       password: enteredPassword,
     };
+
+    fetch("http://localhost:8080/api/users/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(submittedData),
+    })
+      .then((response) => response.json())
+      .then((submittedData) => {
+        console.log("Success: ", submittedData);
+      })
+      .catch((error) => {
+        console.error("Error: ", error);
+      });
 
     setEnteredNameSurname("");
     setEnteredEmail("");
