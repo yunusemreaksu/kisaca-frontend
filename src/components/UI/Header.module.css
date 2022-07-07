@@ -37,6 +37,7 @@
   border-radius: 5px;
   border: 1px outset;
   background-color: #f8f8f8;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .btn_signup a {
@@ -48,6 +49,7 @@
   border: 1px outset;
   background-color: #f8f8f8;
   margin-left: 0.1rem;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .btn_login a {

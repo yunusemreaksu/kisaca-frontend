@@ -1,10 +1,15 @@
-.signup_form input, .btn_signup {
-    display: block;
-    margin-top: .1rem;
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
+
+.signup_form input,
+.btn_signup {
+  display: block;
+  margin-top: 0.1rem;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .btn_signup {
   border-radius: 5px;
   border: 1px outset;
   background-color: #f8f8f8;
+  font-family: "Cormorant Garamond", serif;
 }
