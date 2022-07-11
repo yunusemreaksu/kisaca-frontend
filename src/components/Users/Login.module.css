@@ -1,7 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 
 .login_page {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login_form input {
+  width: 20rem;
+  height: 1.5rem;
 }
 
 .login_form input,
@@ -16,4 +24,8 @@
   border: 1px outset;
   background-color: #f8f8f8;
   font-family: "Cormorant Garamond", serif;
+}
+
+.btn_login:hover {
+  cursor: pointer;
 }

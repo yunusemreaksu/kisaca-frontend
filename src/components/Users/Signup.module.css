@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap");
 
+.signup_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup_form input {
+  width: 20rem;
+  height: 1.5rem;
+}
+
 .signup_form input,
 .btn_signup {
   display: block;
@@ -12,4 +24,8 @@
   border: 1px outset;
   background-color: #f8f8f8;
   font-family: "Cormorant Garamond", serif;
+}
+
+.btn_signup:hover {
+  cursor: pointer;
 }

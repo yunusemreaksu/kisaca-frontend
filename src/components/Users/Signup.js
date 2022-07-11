@@ -52,7 +52,7 @@ const Signup = (props) => {
           type="text"
           name="name-surname"
           id="name-surname"
-          placeholder="Adınız - Soyadınız:"
+          placeholder="Ad - Soyad:"
           value={enteredNameSurname}
           onChange={nameSurnameChangeHandler}
         />
@@ -61,7 +61,7 @@ const Signup = (props) => {
           type="text"
           name="email"
           id="email"
-          placeholder="E-mail Adresiniz:"
+          placeholder="E-mail:"
           value={enteredEmail}
           onChange={emailChangeHandler}
         />
@@ -71,7 +71,7 @@ const Signup = (props) => {
           name="password"
           id="password"
           minLength="6"
-          placeholder="Şifreniz:"
+          placeholder="Şifre:"
           value={enteredPassword}
           onChange={passwordChangeHandler}
         />
